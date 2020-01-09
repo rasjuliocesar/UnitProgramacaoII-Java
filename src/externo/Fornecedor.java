@@ -12,7 +12,7 @@ public class Fornecedor extends Pessoa{
 		super(nome, endereco, telefone);
 	}
 	
-	//Construtor Opicional 1
+	//Construtor Opcional 1
 	public Fornecedor(String nome, String endereco, String telefone, double valorCredito, double valorDivida) {
 		super(nome, endereco, telefone);
 		this.valorCredito = valorCredito;
