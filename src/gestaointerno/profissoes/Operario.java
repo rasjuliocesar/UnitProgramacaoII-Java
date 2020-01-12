@@ -33,7 +33,7 @@ public class Operario extends Empregado{
 	
 	//Método (Abstrato) CalcularSalário() -> Valor do Salário + Comissão (% do valor de Produção) - Impostos(Representação única ex: INSS/FGTS/IRRF).
 	public double calcularSalario() {
-		double salarioOperario = getSalarioBase() - (getSalarioBase() * (getImposto() / 100)) + (this.valorProducao * this.getComissao());
+		double salarioOperario = getSalarioBase() - (getSalarioBase() * (getImposto() / 100)) + (this.getValorProducao() * this.getComissao());
 		return salarioOperario;
 	}
 	
