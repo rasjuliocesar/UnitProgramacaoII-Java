@@ -1,4 +1,4 @@
-package externo;
+package gestaoexterno;
 
 import gestaointerno.Pessoa;
 

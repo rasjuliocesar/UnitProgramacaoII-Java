@@ -1,4 +1,4 @@
-package externo;
+package gestaoexterno;
 
 public class FornecedorJuridico extends Fornecedor{
 
