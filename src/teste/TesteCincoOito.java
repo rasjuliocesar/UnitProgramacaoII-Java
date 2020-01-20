@@ -49,6 +49,8 @@ public class TesteCincoOito {
 		
 		System.out.println(v1);
 		System.out.println("Salario: " + v1.calcularSalario());
+		
+		tc.close();
 	}
 
 }

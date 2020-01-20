@@ -7,9 +7,12 @@ import gestaoexterno.FornecedorJuridico;
 
 public class TesteTresQuatro {
 
-	Scanner tc = new Scanner(System.in);
+	
 	
 	public static void main(String[] args) {
+		
+	Scanner tc = new Scanner(System.in);
+		
 	/*
 	 * Teste ref. tópicos 3 e 4.
 	 */
@@ -33,6 +36,8 @@ public class TesteTresQuatro {
 	System.out.println("Preço Atacado: " + jur.precoPorAtacado());
 	
 	jur.emitirNotaFiscal();
+	
+	tc.close();
 	
 	}
 	

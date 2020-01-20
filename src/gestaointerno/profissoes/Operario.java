@@ -39,7 +39,7 @@ public class Operario extends Empregado{
 	
 	@Override
 	public String toString() {
-		return " Nome: " + getNome() + " Endereço: " + getEndereco() + " Telefone: " + getTelefone() + " CPF: " + getCpf()
+		return "Nome: " + getNome() + " Endereço: " + getEndereco() + " Telefone: " + getTelefone() + " CPF: " + getCpf()
 			 + " Código Setor: " + getCodigoSetor() + " Salário Base: " + getSalarioBase()
 			 + " Valor Produção: " + this.getValorProducao() + " Imposto: " + getImposto() + "%"
 			 + " Salário Líquido: R$ " + this.calcularSalario() ;

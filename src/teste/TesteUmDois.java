@@ -29,6 +29,8 @@ public class TesteUmDois {
 		
 		System.out.println("Crédito: " + f1.getValorCredito());
 		System.out.println("Saldo: " + f1.obterSaldo());
+		
+		tc.close();
 	}
 	
 }
