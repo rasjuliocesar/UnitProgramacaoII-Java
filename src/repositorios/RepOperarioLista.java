@@ -35,6 +35,37 @@ public class RepOperarioLista implements RepOperario{
 	}
 	
 	@Override
+	public void removerOperarioCPF(String cpf) {
+		int posicao = -1;
+		for(Operario ope : operarios) {
+			if(ope.getCpf().equals(cpf)) {
+				posicao = operarios.indexOf(ope);
+				break;
+			}
+		}
+		if(posicao != -1) {
+			operarios.remove(posicao);
+		}else {
+			System.out.println("Operario Não Encontrado!");
+		}
+	}
+	
+	public void removerOperarioSetor(int codigoSetor) {
+		int posicao = -1;
+		for(Operario ope : operarios) {
+			if(ope.getCodigoSetor() == codigoSetor) {
+				posicao = operarios.indexOf(ope);
+				break;
+			}
+		}
+		if(posicao != -1) {
+			operarios.remove(posicao);
+		}else {
+			System.out.println("Operario Não Encontrado!");
+		}
+	}
+	
+	@Override
 	public Operario procurarOperario(String nome) {
 		Operario nomeProcurado = null;
 		for(Operario ope : operarios) {
@@ -44,6 +75,30 @@ public class RepOperarioLista implements RepOperario{
 			}
 		}
 		return nomeProcurado;
+	}
+	
+	@Override
+	public Operario procurarOperarioCPF(String cpf) {
+		Operario cpfProcurado = null;
+		for(Operario ope : operarios) {
+			if(ope.getCpf().equals(cpf)) {
+				cpfProcurado = ope;
+				break;
+			}
+		}
+		return cpfProcurado;
+	}
+	
+	@Override
+	public Operario procurarOperarioSetor(int codigoSetor) {
+		Operario codigoSetorProcurado = null;
+		for(Operario ope : operarios) {
+			if(ope.getCodigoSetor() == codigoSetor) {
+				codigoSetorProcurado = ope;
+				break;
+			}
+		}
+		return codigoSetorProcurado;
 	}
 	
 	public List<Operario> listarOperario(){

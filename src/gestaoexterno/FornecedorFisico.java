@@ -2,7 +2,7 @@ package gestaoexterno;
 
 public class FornecedorFisico extends Fornecedor{
 
-	private int cpf;
+	private String cpf;
 	private double horasTrabalhadas;
 	private double valorPorHora;
 	private String servicosDisponiveis;
@@ -13,17 +13,17 @@ public class FornecedorFisico extends Fornecedor{
 	}
 	
 	//Construtor Opcional 1
-	public FornecedorFisico(String nome, String endereco, String telefone, int cpf) {
+	public FornecedorFisico(String nome, String endereco, String telefone, String cpf) {
 		super(nome, endereco, telefone);
 		this.cpf = cpf;
 	}
 	
 	//Get and Set
-	public int getCpf() {
+	public String getCpf() {
 		return this.cpf;
 	}
 	
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	

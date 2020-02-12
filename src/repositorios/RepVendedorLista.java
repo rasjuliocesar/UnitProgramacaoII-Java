@@ -40,6 +40,37 @@ public class RepVendedorLista implements RepVendedor{
 	}
 	
 	@Override
+	public void removerVendedorCPF(String cpf) {
+		int posicao = -1;
+		for(Vendedor ven : vendedores) {
+			if(ven.getCpf().equals(cpf)) {
+				posicao = vendedores.indexOf(ven);
+				break;
+			}
+		}
+		if(posicao != -1) {
+			vendedores.remove(posicao);
+		}else {
+			System.out.println("Vendedor Não Encontrado!");
+		}
+	}
+	
+	public void removerVendedorSetor(int codigoSetor) {
+		int posicao = -1;
+		for(Vendedor ven : vendedores) {
+			if(ven.getCodigoSetor() == codigoSetor) {
+				posicao = vendedores.indexOf(ven);
+				break;
+			}
+		}
+		if(posicao != -1) {
+			vendedores.remove(posicao);
+		}else {
+			System.out.println("Vendedor Não Encontrado!");
+		}
+	}
+	
+	@Override
 	public Vendedor procurarVendedor(String nome) {
 		Vendedor nomeProcurado = null;
 		for(Vendedor ven : vendedores) {
@@ -49,5 +80,29 @@ public class RepVendedorLista implements RepVendedor{
 			}
 		}
 		return nomeProcurado;
+	}
+	
+	@Override
+	public Vendedor procurarVendedorCPF(String cpf) {
+		Vendedor cpfProcurado = null;
+		for(Vendedor ven : vendedores) {
+			if(ven.getCpf().equals(cpf)) {
+				cpfProcurado = ven;
+				break;
+			}
+		}
+		return cpfProcurado;
+	}
+	
+	@Override
+	public Vendedor procurarVendedorSetor(int codigoSetor) {
+		Vendedor codigoSetorProcurado = null;
+		for(Vendedor ven : vendedores) {
+			if(ven.getCodigoSetor() == codigoSetor) {
+				codigoSetorProcurado = ven;
+				break;
+			}
+		}
+		return codigoSetorProcurado;
 	}
 }

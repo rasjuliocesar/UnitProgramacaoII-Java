@@ -21,7 +21,7 @@ public class Telas {
 		System.out.println("                    CADASTRO DE EMPREGADOS                      ");
 		System.out.println(" 1 - ADMINISTRADOR        2 - OPERARIO          3 - VENDEDOR  \n");
 		System.out.println("                  CADASTRO DE FORNECEDORES                      ");
-		System.out.println(" 4 - JURIDICO             5 - FISICO            6 - EMITIR NF \n");
+		System.out.println(" 4 - JURIDICO             5 - FISICO\n"); //6 - EMITIR NF
 		System.out.println("0 - VOLTAR TELA ANTERIOR"                                        );
 		System.out.println("----------------------------------------------------------------");
 	}
@@ -60,7 +60,7 @@ public class Telas {
 		System.out.println("                       LISTAR EMPREGADOS                        ");
 		System.out.println(" 1 - ADMINISTRADOR        2 - OPERARIO          3 - VENDEDOR  \n");
 		System.out.println("                      LISTAR FORNECEDORES                       ");
-		System.out.println(" 4 - JURIDICO             5 - FISICO            6 - NOTA FISCAL\n");
+		System.out.println(" 4 - JURIDICO             5 - FISICO"); //6 - NOTA FISCAL
 		System.out.println("0 - VOLTAR TELA ANTERIOR");
 		System.out.println("----------------------------------------------------------------");
 	}

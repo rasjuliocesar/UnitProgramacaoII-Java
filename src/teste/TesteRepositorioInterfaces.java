@@ -54,7 +54,7 @@ public class TesteRepositorioInterfaces {
 		System.out.println("Listando");
 		//Listando Dados
 		
-		System.out.println(repAdm.listarAdministrador());
+		//System.out.println(repAdm.listarAdministrador());
 		System.out.println(repOpe.listarOperario());
 		System.out.println(repVen.listarVendedor());
 		System.out.println(repJur.listarForJuridico());
@@ -92,7 +92,7 @@ public class TesteRepositorioInterfaces {
 		repJur.removerForJuridico(nomeJur);
 		repFis.removerForFisico(nomeFis);
 		
-		System.out.println(repAdm.listarAdministrador());
+		//System.out.println(repAdm.listarAdministrador());
 		System.out.println(repOpe.listarOperario());
 		System.out.println(repVen.listarVendedor());
 		System.out.println(repJur.listarForJuridico());

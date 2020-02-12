@@ -40,6 +40,22 @@ public class RepForFisicoLista implements RepForFisico{
 	}
 	
 	@Override
+	public void removerForFisicoCPF(String cpf) {
+		int posicao = -1;
+		for(FornecedorFisico fis : forFisicos) {
+			if(fis.getCpf().equals(cpf)) {
+				posicao = forFisicos.indexOf(fis);
+				break;
+			}
+		}
+		if(posicao != -1) {
+			forFisicos.remove(posicao);
+		}else {
+			System.out.println("Fornecedor Físico Não Encontrado!");
+		}
+	}
+	
+	@Override
 	public FornecedorFisico procurarForFisico(String nome) {
 		FornecedorFisico nomeProcurado = null;
 		for(FornecedorFisico fis : forFisicos) {
@@ -49,5 +65,17 @@ public class RepForFisicoLista implements RepForFisico{
 			}
 		}
 		return nomeProcurado;
+	}
+	
+	@Override
+	public FornecedorFisico procurarForFisicoCPF(String cpf) {
+		FornecedorFisico cpfProcurado = null;
+		for(FornecedorFisico fis : forFisicos) {
+			if(fis.getCpf().equals(cpf)) {
+				cpfProcurado = fis;
+				break;
+			}
+		}
+		return cpfProcurado;
 	}
 }

@@ -35,6 +35,37 @@ public class RepAdministradorLista implements RepAdministrador{
 		}
 	}
 	
+	public void removerAdministradorSetor(int codigoSetor) {
+		int posicao = -1;
+		for(Administrador adm : administradores) {
+			if(adm.getCodigoSetor() == codigoSetor) {
+				posicao = administradores.indexOf(adm);
+				break;
+			}
+		}
+		if(posicao != -1) {
+			administradores.remove(posicao);
+		}else {
+			System.out.println("Administrador Não Encontrado!");
+		}
+	}
+	
+	@Override
+	public void removerAdministradorCPF(String cpf) {
+		int posicao = -1;
+		for(Administrador adm : administradores) {
+			if(adm.getCpf().equals(cpf)) {
+				posicao = administradores.indexOf(adm);
+				break;
+			}
+		}
+		if(posicao != -1) {
+			administradores.remove(posicao);
+		}else {
+			System.out.println("Administrador Não Encontrado!");
+		}
+	}	
+	
 	@Override
 	public Administrador procurarAdministrador(String nome) {
 		Administrador nomeProcurado = null;
@@ -47,7 +78,34 @@ public class RepAdministradorLista implements RepAdministrador{
 		return nomeProcurado;
 	}
 	
-	public List<Administrador> listarAdministrador(){
-		return this.administradores;
+	@Override
+	public Administrador procurarAdministradorSetor(int codigoSetor) {
+		Administrador codigoSetorProcurado = null;
+		for(Administrador adm : administradores) {
+			if(adm.getCodigoSetor() == codigoSetor){
+				codigoSetorProcurado = adm;
+				break;
+			}
+		}
+		return codigoSetorProcurado;
+	}
+	
+	@Override
+	public Administrador procurarAdministradorCPF(String cpf) {
+		Administrador cpfProcurado = null;
+		for(Administrador adm : administradores) {
+			if(adm.getCpf().equals(cpf)){
+				cpfProcurado = adm;
+				break;
+			}
+		}
+		return cpfProcurado;
+	}
+	
+	public void listarAdministrador(){
+		//return this.administradores;
+		for(Administrador adm : administradores) {
+			System.out.println(adm.toString());
+		}
 	}
 }

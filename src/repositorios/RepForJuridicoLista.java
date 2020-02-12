@@ -40,6 +40,22 @@ public class RepForJuridicoLista implements RepForJuridico{
 	}
 	
 	@Override
+	public void removerForJuridicoCNPJ(String cnpj) {
+		int posicao = -1;
+		for(FornecedorJuridico jur : forJuridicos) {
+			if(jur.getCnpj().equals(cnpj)) {
+				posicao = forJuridicos.indexOf(jur);
+				break;
+			}
+		}
+		if(posicao != -1) {
+			forJuridicos.remove(posicao);
+		}else {
+			System.out.println("Fornecedor Juridico Não Encontrado!");
+		}
+	}
+	
+	@Override
 	public FornecedorJuridico procurarForJuridico(String nome) {
 		FornecedorJuridico nomeProcurado = null;
 		for(FornecedorJuridico jur : forJuridicos) {
@@ -49,5 +65,17 @@ public class RepForJuridicoLista implements RepForJuridico{
 			}
 		}
 		return nomeProcurado;
+	}
+	
+	@Override
+	public FornecedorJuridico procurarForJuridicoCNPJ(String cnpj) {
+		FornecedorJuridico cnpjProcurado = null;
+		for(FornecedorJuridico jur : forJuridicos) {
+			if(jur.getCnpj().equals(cnpj)) {
+				cnpjProcurado = jur;
+				break;
+			}
+		}
+		return cnpjProcurado;
 	}
 }
